@@ -574,59 +574,6 @@ class _DetailState extends State<Detail> {
                           )
                         ],
                       ),
-
-                      Container(
-                        height: 55,
-                        decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 24, 24, 41),
-                            borderRadius: BorderRadius.circular(20)),
-                        child: TabBar(
-                            dividerColor: Colors.transparent,
-                            indicator: BoxDecoration(
-                                borderRadius: BorderRadius.circular(30),
-                                gradient: LinearGradient(colors: [
-                                  const Color.fromARGB(255, 244, 165, 138),
-                                  const Color.fromARGB(255, 237, 107, 78)
-                                ])),
-                            tabs: [
-                              Tab(
-                                child: Text(
-                                  '    Line Up     ',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 18),
-                                ),
-                              ),
-                              Tab(
-                                child: Text(
-                                  '    H2H    ',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 18),
-                                ),
-                              )
-                            ]),
-
-                            
-                      ),
-
-                      Expanded(child: TabBarView(children: [
-                        Text('data'),
-                        Text('data'),
-                      ]))
-
-                      // // Container(
-                      // //   height: 55,
-                      // //   decoration: BoxDecoration(
-                      // //       borderRadius: BorderRadius.circular(20),
-                      // //       color: Colors.white),
-                      // //   child: TabBar(
-                      // //       indicator: BoxDecoration(
-                      // //           borderRadius: BorderRadius.circular(30),
-                      // //           gradient: LinearGradient(colors: [
-                      // //             const Color.fromARGB(255, 244, 165, 138),
-                      // //             const Color.fromARGB(255, 237, 107, 78)
-                      // //           ])),
-                      // //       tabs: [Tab()]),
-                      // ),
                     ],
                   ),
 
@@ -669,5 +616,79 @@ class _DetailState extends State<Detail> {
             ),
           ),
         ));
+  }
+}
+
+class MyTabOne extends StatelessWidget {
+  const MyTabOne({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Text(
+      "This is Tab One",
+      style: TextStyle(fontSize: 20),
+    ));
+  }
+}
+
+class MyTabTwo extends StatelessWidget {
+  const MyTabTwo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 2,
+      child: Container(
+        child: Column(
+          // ignore: prefer_const_literals_to_create_immutables
+          children: [
+            // SwitcherButton(
+            //   value: true,
+            //   onChange: (value) {
+            //     print(value);
+            //   },
+            // ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 30,
+                width: 150,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white),
+                child: TabBar(
+                  indicator: BoxDecoration(
+                    color: Colors.red[800],
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  labelColor: Colors.black,
+                  dividerColor: Colors.black,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  tabs: [
+                    Tab(
+                      text: "Live",
+                    ),
+                    Tab(
+                      text: "Result",
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              // ignore: prefer_const_literals_to_create_immutables
+              child: TabBarView(children: [
+                // MyLivePage(),
+                // MyResultPage(),
+              ]),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
