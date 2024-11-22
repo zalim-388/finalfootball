@@ -1,0 +1,52 @@
+name: finalfootball
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+# The following defines the version and build number for your application.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Add assets to your application below:
+  assets:
+    # - assets/photo1.png
+    # - assets/Ellipse 1212 (9).png
+    - assets/photo2..png
+    - assets/image 3.png
+    - assets/image 4.png
+    - assets/image 2.png
+    - assets/baseball.png
+    - assets/tennis.png
+    - assets/image 1.png
+    - assets/image-removebg-preview 4.png
+    - assets/image 10.png
+    - assets/barcelona.png
+    - assets/realmadrid.png
+    - assets/image 9.png
+    - assets/Arsenal.png
+    - assets/idezia.png
+    - assets/UEFA_Champions_League-Logo.wine.png
+    - assets/nGfV05dipbAc7zzojivKew_64x64.png
+    - assets/Chelsea.png
+    - assets/manunited.png
+    - assets/Southampton F.C..png
+    - assets/Tottenham Hotspur F.C..png
+    
