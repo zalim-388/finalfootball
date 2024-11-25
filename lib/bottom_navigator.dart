@@ -1,8 +1,11 @@
+import 'package:finalfootball/Explore_Screen.dart';
 import 'package:finalfootball/Home_screen.dart';
+import 'package:finalfootball/Standings_Screen.dart';
+import 'package:finalfootball/profile.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavigator extends StatefulWidget {
-   BottomNavigator({super.key});
+  BottomNavigator({super.key});
 
   @override
   State<BottomNavigator> createState() => _BottomNavigatorState();
@@ -10,23 +13,13 @@ class BottomNavigator extends StatefulWidget {
 
 class _BottomNavigatorState extends State<BottomNavigator> {
   int _selectedIndex = 0;
-  static  TextStyle optionStyle =
+  static TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static  List<Widget> _widgetOptions = <Widget>[
-           HomeScreen(),
-
-    Text(
-      'Index 1: Explore',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Standings',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: profile',
-      style: optionStyle,
-    ),
+  static List<Widget> _widgetOptions = <Widget>[
+    HomeScreen(),
+    ExploreScreen(),
+    StandingsScreen(),
+    Profile(),
   ];
 
   void _onItemTapped(int index) {
@@ -42,37 +35,50 @@ class _BottomNavigatorState extends State<BottomNavigator> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        
         // ignore: prefer_const_literals_to_create_immutables
-        items:[
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined,color: Colors.grey,size: 30,),
-           label: 'Home',
-            backgroundColor:  const Color.fromARGB(255, 24, 24, 41),
+            icon: Icon(
+              Icons.home_outlined,
+              color: Colors.grey,
+              size: 30,
+            ),
+            label: 'Home',
+            backgroundColor: const Color.fromARGB(255, 24, 24, 41),
           ),
-
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore_outlined,color: Colors.grey,size: 30,),
+            icon: Icon(
+              Icons.explore_outlined,
+              color: Colors.grey,
+              size: 30,
+            ),
             label: 'Explore',
             backgroundColor: const Color.fromARGB(255, 24, 24, 41),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.poll_outlined,color: Colors.grey,size: 30,),
+            icon: Icon(
+              Icons.poll_outlined,
+              color: Colors.grey,
+              size: 30,
+            ),
             label: 'Standings',
             backgroundColor: const Color.fromARGB(255, 24, 24, 41),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline,color: Colors.grey,size: 30,),
+            icon: Icon(
+              Icons.person_outline,
+              color: Colors.grey,
+              size: 30,
+            ),
             label: 'Profile',
             backgroundColor: const Color.fromARGB(255, 24, 24, 41),
           ),
         ],
-       currentIndex: _selectedIndex,
-  selectedItemColor: Colors.blue.shade700, // Color for selected label
-  unselectedItemColor: Colors.grey, // Color for unselected labels
-  onTap: _onItemTapped,
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.blue.shade700, // Color for selected label
+        unselectedItemColor: Colors.grey, // Color for unselected labels
+        onTap: _onItemTapped,
       ),
     );
-    
   }
 }

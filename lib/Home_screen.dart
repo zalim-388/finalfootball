@@ -257,7 +257,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: [
                                 CircleAvatar(
                                   backgroundImage:
-                                      AssetImage(' assets/tennis.png'),
+                                      AssetImage(' assets/tennis.png'),child: Icon(Icons.sports_tennis,),
                                   radius: 25,
                                 ),
                                 Text(

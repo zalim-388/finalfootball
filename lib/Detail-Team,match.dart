@@ -409,7 +409,7 @@ class _DetailState extends State<Detail> {
                                         bottomRight: Radius.circular(20),
                                         topRight: Radius.circular(20)),
                                     color:
-                                        const Color.fromARGB(255, 24, 24, 41),
+                                        Color.fromARGB(255, 12, 12, 46),
                                   ),
                                   alignment: Alignment.center,
                                   child: Text(
@@ -571,8 +571,40 @@ class _DetailState extends State<Detail> {
                           Text(
                             '(4-2-3-1)',
                             style: TextStyle(color: Colors.grey, fontSize: 20),
-                          )
+                          ),
                         ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 100),
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 50,
+                              width: 100,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                gradient: LinearGradient(colors: [
+                                  const Color.fromARGB(255, 244, 165, 138),
+                                  const Color.fromARGB(255, 237, 107, 78)
+                                ]),
+                              ),
+                              alignment: Alignment.center,
+                              child: Text(
+                                'Arsenal',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: Text(
+                                'Aston villa',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -595,100 +627,12 @@ class _DetailState extends State<Detail> {
                           )
                         ],
                       ),
-                      // // Container(
-                      // //   height: 55,
-                      // //   decoration: BoxDecoration(
-                      // //       borderRadius: BorderRadius.circular(20),
-                      // //       color: Colors.white),
-                      // //   child: TabBar(
-                      // //       indicator: BoxDecoration(
-                      // //           borderRadius: BorderRadius.circular(30),
-                      // //           gradient: LinearGradient(colors: [
-                      // //             const Color.fromARGB(255, 244, 165, 138),
-                      // //             const Color.fromARGB(255, 237, 107, 78)
-                      // //           ])),
-                      // //       tabs: [Tab()]),
-                      // ),
                     ],
-                  )
+                  ),
                 ]))
               ],
             ),
           ),
         ));
-  }
-}
-
-class MyTabOne extends StatelessWidget {
-  const MyTabOne({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child: Text(
-      "This is Tab One",
-      style: TextStyle(fontSize: 20),
-    ));
-  }
-}
-
-class MyTabTwo extends StatelessWidget {
-  const MyTabTwo({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Container(
-        child: Column(
-          // ignore: prefer_const_literals_to_create_immutables
-          children: [
-            // SwitcherButton(
-            //   value: true,
-            //   onChange: (value) {
-            //     print(value);
-            //   },
-            // ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 30,
-                width: 150,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white),
-                child: TabBar(
-                  indicator: BoxDecoration(
-                    color: Colors.red[800],
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  labelColor: Colors.black,
-                  dividerColor: Colors.black,
-                  // ignore: prefer_const_literals_to_create_immutables
-                  tabs: [
-                    Tab(
-                      text: "Live",
-                    ),
-                    Tab(
-                      text: "Result",
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Expanded(
-              // ignore: prefer_const_literals_to_create_immutables
-              child: TabBarView(children: [
-                // MyLivePage(),
-                // MyResultPage(),
-              ]),
-            ),
-          ],
-        ),
-      ),
-    );
   }
 }
