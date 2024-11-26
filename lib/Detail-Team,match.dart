@@ -321,8 +321,7 @@ class _DetailState extends State<Detail> {
                                 height: 95,
                                 width: 80,
                                 decoration: BoxDecoration(
-                                    color:
-                                        const Color.fromARGB(255, 24, 24, 41),
+                                    color: Color.fromARGB(255, 1, 1, 56),
                                     borderRadius: BorderRadius.only(
                                         bottomRight: Radius.circular(20),
                                         topRight: Radius.circular(20))),
@@ -408,8 +407,7 @@ class _DetailState extends State<Detail> {
                                     borderRadius: BorderRadius.only(
                                         bottomRight: Radius.circular(20),
                                         topRight: Radius.circular(20)),
-                                    color:
-                                        Color.fromARGB(255, 12, 12, 46),
+                                    color: Color.fromARGB(255, 1, 1, 56),
                                   ),
                                   alignment: Alignment.center,
                                   child: Text(
@@ -606,6 +604,13 @@ class _DetailState extends State<Detail> {
                           ],
                         ),
                       ),
+                      Container(
+                        height: 400,
+                        width: 500,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/Group 3228.png'))),
+                      )
                     ],
                   ),
 

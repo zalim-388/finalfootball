@@ -257,7 +257,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: [
                                 CircleAvatar(
                                   backgroundImage:
-                                      AssetImage(' assets/tennis.png'),child: Icon(Icons.sports_tennis,),
+                                      AssetImage(' assets/tennis.png'),
+                                  child: Icon(
+                                    Icons.sports_tennis,
+                                  ),
                                   radius: 25,
                                 ),
                                 Text(
@@ -343,7 +346,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(20),
                                 bottomRight: Radius.circular(20)),
-                            color: const Color.fromARGB(255, 24, 24, 41),
+                            color: Color.fromARGB(255, 1, 1, 56),
                             // color:
                             // Colors.white,
                           ),
@@ -457,7 +460,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(20),
                                 bottomRight: Radius.circular(20)),
-                            color: const Color.fromARGB(255, 24, 24, 41),
+                          color: Color.fromARGB(255, 1, 1, 56),
                           ),
                           alignment: Alignment.center,
                           child: Text(
@@ -562,7 +565,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             bottomRight: Radius.circular(20),
                             topRight: Radius.circular(20),
                           ),
-                          color: const Color.fromARGB(255, 24, 24, 41),
+                       color: Color.fromARGB(255, 1, 1, 56),
                         ),
                         alignment: Alignment.center,
                         child: Text(

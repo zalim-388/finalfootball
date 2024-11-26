@@ -9,6 +9,23 @@ class Screen2 extends StatefulWidget {
 }
 
 class _Screen2State extends State<Screen2> {
+  List<String> images = [
+    'assets/image 3.png',
+    'assets/image 4.png',
+    'assets/tennis.png',
+    'assets/baseball.png',
+    'assets/image 2.png',
+    'assets/image 1.png',
+  ];
+  List<String> TExt = [
+    'Soccerball',
+    'Basketball',
+    'Tennis',
+    'Baseball',
+    'Football',
+    'volleyball'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,116 +55,152 @@ class _Screen2State extends State<Screen2> {
                 ),
               ),
 
-              Padding(
-                padding: const EdgeInsets.only(top: 50),
-                child: Row(
-                  children: [
-                    Column(
+
+
+
+
+
+              Expanded(
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 5,
+                    mainAxisSpacing: 5,
+                    childAspectRatio: 1,
+                  ),
+                  itemCount: images.length,
+                  itemBuilder: (context, index) {
+                    return Column(
                       children: [
                         CircleAvatar(
-                            backgroundColor:
-                                const Color.fromARGB(255, 244, 165, 138),
-                            radius: 60,
-                            child: CircleAvatar(
-                              backgroundImage: AssetImage('assets/image 3.png'),
-                              radius: 30,
-                            )),
+                          backgroundColor:
+                              const Color.fromARGB(255, 34, 34, 50),
+                          radius: 60,
+                          child: CircleAvatar(
+                            backgroundImage: AssetImage(images[index]),
+                            radius: 40,
+                          ),
+                        ),
                         Text(
-                          'Soccerball',
+                          TExt[index],
                           style: TextStyle(color: Colors.white),
                         ),
-                        Column(
-                          children: [
-                            CircleAvatar(
-                                backgroundColor:
-                                    const Color.fromARGB(255, 34, 34, 50),
-                                radius: 60,
-                                child: CircleAvatar(
-                                  backgroundImage:
-                                      AssetImage('assets/baseball.png'),
-                                  radius: 30,
-                                )),
-                            Text(
-                              'Baseball',
-                              style: TextStyle(color: Colors.white),
-                            )
-                          ],
-                        ),
                       ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                              backgroundColor:
-                                  const Color.fromARGB(255, 34, 34, 50),
-                              radius: 60,
-                              child: CircleAvatar(
-                                backgroundImage:
-                                    AssetImage('assets/image 4.png'),
-                                radius: 30,
-                              )),
-                          Text(
-                            'Basketball',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          Column(
-                            children: [
-                              CircleAvatar(
-                                  backgroundColor:
-                                      const Color.fromARGB(255, 34, 34, 50),
-                                  radius: 60,
-                                  child: CircleAvatar(
-                                    backgroundImage:
-                                        AssetImage('assets/tennis.png'),
-                                    radius: 30,
-                                  )),
-                              Text(
-                                'Tennis',
-                                style: TextStyle(color: Colors.white),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                              backgroundColor:
-                                  const Color.fromARGB(255, 34, 34, 50),
-                              radius: 60,
-                              child: CircleAvatar(
-                                backgroundImage:
-                                    AssetImage('assets/image 2.png'),
-                                radius: 30,
-                              )),
-                          Text(
-                            'American Football',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          CircleAvatar(
-                              backgroundColor:
-                                  const Color.fromARGB(255, 34, 34, 50),
-                              radius: 60,
-                              child: CircleAvatar(
-                                backgroundImage:
-                                    AssetImage('assets/image 1.png'),
-                                radius: 30,
-                              )),
-                          Text(
-                            'Volleyball',
-                            style: TextStyle(color: Colors.white),
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
+                    );
+                  },
                 ),
               ),
+
+              // Padding(
+              //   padding: const EdgeInsets.only(top: 50),
+              //   child: Row(
+              //     children: [
+              //       Column(
+              //         children: [
+              //           CircleAvatar(
+              //               backgroundColor:
+              //                   const Color.fromARGB(255, 244, 165, 138),
+              //               radius: 60,
+              //               child: CircleAvatar(
+              //                 backgroundImage: AssetImage('assets/image 3.png'),
+              //                 radius: 30,
+              //               )),
+              //           Text(
+              //             'Soccerball',
+              //             style: TextStyle(color: Colors.white),
+              //           ),
+              //           Column(
+              //             children: [
+              //               CircleAvatar(
+              //                   backgroundColor:
+              //                       const Color.fromARGB(255, 34, 34, 50),
+              //                   radius: 60,
+              //                   child: CircleAvatar(
+              //                     backgroundImage:
+              //                         AssetImage('assets/baseball.png'),
+              //                     radius: 30,
+              //                   )),
+              //               Text(
+              //                 'Baseball',
+              //                 style: TextStyle(color: Colors.white),
+              //               )
+              //             ],
+              //           ),
+              //         ],
+              //       ),
+              //       Padding(
+              //         padding: const EdgeInsets.only(left: 10),
+              //         child: Column(
+              //           children: [
+              //             CircleAvatar(
+              //                 backgroundColor:
+              //                     const Color.fromARGB(255, 34, 34, 50),
+              //                 radius: 60,
+              //                 child: CircleAvatar(
+              //                   backgroundImage:
+              //                       AssetImage('assets/image 4.png'),
+              //                   radius: 30,
+              //                 )),
+              //             Text(
+              //               'Basketball',
+              //               style: TextStyle(color: Colors.white),
+              //             ),
+              //             Column(
+              //               children: [
+              //                 CircleAvatar(
+              //                     backgroundColor:
+              //                         const Color.fromARGB(255, 34, 34, 50),
+              //                     radius: 60,
+              //                     child: CircleAvatar(
+              //                       backgroundImage:
+              //                           AssetImage('assets/tennis.png'),
+              //                       radius: 30,
+              //                     )),
+              //                 Text(
+              //                   'Tennis',
+              //                   style: TextStyle(color: Colors.white),
+              //                 )
+              //               ],
+              //             )
+              //           ],
+              //         ),
+              //       ),
+              //       Padding(
+              //         padding: const EdgeInsets.only(left: 10),
+              //         child: Column(
+              //           children: [
+              //             CircleAvatar(
+              //                 backgroundColor:
+              //                     const Color.fromARGB(255, 34, 34, 50),
+              //                 radius: 60,
+              //                 child: CircleAvatar(
+              //                   backgroundImage:
+              //                       AssetImage('assets/image 2.png'),
+              //                   radius: 30,
+              //                 )),
+              //             Text(
+              //               'American Football',
+              //               style: TextStyle(color: Colors.white),
+              //             ),
+              //             CircleAvatar(
+              //                 backgroundColor:
+              //                     const Color.fromARGB(255, 34, 34, 50),
+              //                 radius: 60,
+              //                 child: CircleAvatar(
+              //                   backgroundImage:
+              //                       AssetImage('assets/image 1.png'),
+              //                   radius: 30,
+              //                 )),
+              //             Text(
+              //               'Volleyball',
+              //               style: TextStyle(color: Colors.white),
+              //             )
+              //           ],
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
               Padding(
                 padding: const EdgeInsets.only(top: 150),
                 child: GestureDetector(
@@ -155,7 +208,7 @@ class _Screen2State extends State<Screen2> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>BottomNavigator(),
+                          builder: (context) => BottomNavigator(),
                         ));
                   },
                   child: Container(
