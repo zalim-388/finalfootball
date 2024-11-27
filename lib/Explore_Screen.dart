@@ -1,3 +1,4 @@
+import 'package:finalfootball/Search_screen.dart';
 import 'package:flutter/material.dart';
 
 class ExploreScreen extends StatefulWidget {
@@ -21,24 +22,39 @@ class _ExploreScreenState extends State<ExploreScreen> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 30),
-                    child: Container(
-                      height: 70,
-                      width: 350,
-                      decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 34, 34, 50),
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 20),
-                        child: TextField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(
-                                Icons.search_outlined,
-                                size: 30,
-                                color: Colors.grey.shade700,
-                              ),
-                              hintText: 'Search for news, team, match, etc...',
-                              hintStyle: TextStyle(color: Colors.grey.shade700),
-                              border: InputBorder.none),
+                    child: GestureDetector(onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => SearchScreen(),));
+                    },
+                      child: Container(
+                        height: 70,
+                        width: 350,
+                        decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 34, 34, 50),
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 20),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => SearchScreen(),
+                                  ));
+                            },
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  prefixIcon: Icon(
+                                    Icons.search_outlined,
+                                    size: 30,
+                                    color: Colors.grey.shade700,
+                                  ),
+                                  hintText:
+                                      'Search for news, team, match, etc...',
+                                  hintStyle:
+                                      TextStyle(color: Colors.grey.shade700),
+                                  border: InputBorder.none),
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -70,47 +86,117 @@ class _ExploreScreenState extends State<ExploreScreen> {
                                   backgroundImage:
                                       AssetImage('assets/image 3.png'),
                                   radius: 20,
-                                  child: Text('Soccer'),
+                                ),
+                                const SizedBox(height: 5),
+                                const Text(
+                                  '  Soccer  ',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 15),
                                 ),
                               ],
                             ),
                           ),
                           Tab(
-                            child: CircleAvatar(
-                              backgroundImage: AssetImage('assets/image 4.png'),
-                              radius: 20,
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage('assets/image 4.png'),
+                                  radius: 20,
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                const Text(
+                                  'Basketball',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 15),
+                                )
+                              ],
                             ),
                           ),
                           Tab(
-                            child: CircleAvatar(
-                              backgroundImage: AssetImage('assets/tennis.png'),
-                              radius: 20,
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage('assets/image 2.png'),
+                                  radius: 20,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  '  Football  ',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 15),
+                                )
+                              ],
                             ),
                           ),
                           Tab(
-                            child: CircleAvatar(
-                              backgroundImage:
-                                  AssetImage('assets/baseball.png'),
-                              radius: 20,
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage('assets/baseball.png'),
+                                  radius: 20,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  'baseball',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 15),
+                                ),
+                              ],
                             ),
                           ),
                           Tab(
-                            child: CircleAvatar(
-                              backgroundImage:
-                                  AssetImage('assets/image 2.pngg'),
-                              radius: 20,
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage('assets/tennis.png'),
+                                  radius: 20,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  'Tennis',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 15),
+                                )
+                              ],
                             ),
                           ),
                           Tab(
-                            child: CircleAvatar(
-                              backgroundImage: AssetImage('assets/image 1.png'),
-                              radius: 20,
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage('assets/image 1.png'),
+                                  radius: 20,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  'Vollyball',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 15),
+                                )
+                              ],
                             ),
                           ),
                         ]),
                   ),
 
-                  Padding(
+                  Column(
+                    children: [
+                        Padding(
                     padding: const EdgeInsets.symmetric(vertical: 20),
                     child: Row(
                       children: [
@@ -272,6 +358,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     ],
                   ),
 
+
+                    ],
+                  ),
+
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
@@ -279,12 +369,27 @@ class _ExploreScreenState extends State<ExploreScreen> {
                         style: TextStyle(color: Colors.white, fontSize: 35),
                       )),
 
-                  Container(
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage('assets/articel4.png'),
-                            fit: BoxFit.contain),
-                        shape: BoxShape.rectangle),
+                  SingleChildScrollView(scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 250,width: 350,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('assets/articel4.png'),
+                                  fit: BoxFit.contain),
+                              shape: BoxShape.rectangle),
+                        ),
+                        Container(
+                          height: 250,width: 350,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('assets/articel4.png'),
+                                  fit: BoxFit.contain),
+                              shape: BoxShape.rectangle),
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),
