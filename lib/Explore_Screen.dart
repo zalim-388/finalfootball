@@ -1,3 +1,4 @@
+import 'package:finalfootball/Article_Detail.dart';
 import 'package:finalfootball/Search_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -372,13 +373,17 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   SingleChildScrollView(scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        Container(
-                          height: 250,width: 350,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage('assets/articel4.png'),
-                                  fit: BoxFit.contain),
-                              shape: BoxShape.rectangle),
+                        GestureDetector(onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => ArticleDetail() ,));
+                        },
+                          child: Container(
+                            height: 250,width: 350,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('assets/articel4.png'),
+                                    fit: BoxFit.contain),
+                                shape: BoxShape.rectangle),
+                          ),
                         ),
                         Container(
                           height: 250,width: 350,
