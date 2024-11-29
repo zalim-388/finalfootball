@@ -262,8 +262,8 @@ class _StandingsScreenState extends State<StandingsScreen> {
                           color: const Color.fromARGB(255, 34, 34, 50),
                         ),
                         child: DataTable(
-                          dividerThickness: 0,
-                          columnSpacing: 15,
+                          dividerThickness: 0.0000001,
+                          columnSpacing: 13,
                           headingTextStyle: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -432,8 +432,8 @@ class _StandingsScreenState extends State<StandingsScreen> {
                           color: const Color.fromARGB(255, 34, 34, 50),
                         ),
                         child: DataTable(
-                            dividerThickness: 0,
-                            columnSpacing: 15,
+                            dividerThickness: 0.00001,
+                            columnSpacing: 13,
                             headingTextStyle: TextStyle(
                                 color: Colors.white,
                                 fontSize: 17,
