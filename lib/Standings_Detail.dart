@@ -15,24 +15,24 @@ class _StandingsDetailState extends State<StandingsDetail> {
         child: Scaffold(
           backgroundColor: const Color.fromARGB(255, 24, 24, 41),
           appBar: AppBar(
-              backgroundColor: const Color.fromARGB(255, 24, 24, 41),
-              leading: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(
-                  Icons.arrow_back_ios_outlined,
-                  color: Colors.white,
-                ),
+            backgroundColor: const Color.fromARGB(255, 24, 24, 41),
+            leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.arrow_back_ios_outlined,
+                color: Colors.white,
               ),
-              title: Padding(
-                padding: const EdgeInsets.only(left: 100),
-                child: Text(
-                    '🇪🇸 Spain',
-                    style: TextStyle(color: Colors.white,fontSize: 30),
-                  ),
+            ),
+            title: Padding(
+              padding: const EdgeInsets.only(left: 100),
+              child: Text(
+                '🇪🇸 Spain',
+                style: TextStyle(color: Colors.white, fontSize: 30),
               ),
-              ),
+            ),
+          ),
           body: Padding(
             padding: const EdgeInsets.only(top: 50),
             child: Column(children: [
@@ -427,9 +427,7 @@ class _StandingsDetailState extends State<StandingsDetail> {
                             DataCell(Text('0')),
                             DataCell(Text('20')),
                           ]),
-
-
- DataRow(cells: [
+                          DataRow(cells: [
                             DataCell(Row(
                               children: [
                                 Text('9'),
@@ -456,10 +454,6 @@ class _StandingsDetailState extends State<StandingsDetail> {
                             DataCell(Text('0')),
                             DataCell(Text('20')),
                           ]),
-
-
-
-
                         ],
                       ),
                     ),

@@ -9,20 +9,7 @@ class StandingsScreen extends StatefulWidget {
 }
 
 class _StandingsScreenState extends State<StandingsScreen> {
-  // List<String> image = [
-  //   'Team',
-  //   'assets/barcelona.png',
-  //   'assets/realmadrid.png',
-  //   'assets/Atletico.png',
-  //   'assets/villareal.png',
-  // ];
-  // List<String> team = [
-  //   '',
-  //   'barcelona',
-  //   'Realmadrid',
-  //   'Atletico',
-  //   'villareal'
-  // ];
+ 
 
   @override
   Widget build(BuildContext context) {
