@@ -1,2 +1,0 @@
-C:/Users/Rootsys-12/Desktop/SALiM/flutter basic/new project/finalfootball/android/app/.cxx/RelWithDebInfo/6u211e2b/x86/CMakeFiles/edit_cache.dir
-C:/Users/Rootsys-12/Desktop/SALiM/flutter basic/new project/finalfootball/android/app/.cxx/RelWithDebInfo/6u211e2b/x86/CMakeFiles/rebuild_cache.dir
